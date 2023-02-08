@@ -16,7 +16,7 @@ pipeline{
         }
         stage('Deploy to registry') {
             steps {
-                sh 'deploy to registry'
+                sh 'echo "deploy to registry"'
             }
         }
     }
