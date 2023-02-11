@@ -15,6 +15,9 @@ app.use(bodyParser.json())
 //app.use('/auth', authRouter.authRoutes);
 app.use('/task', taskRouter.taskRoutes);
 app.use('/auth', authRouter.authRoutes);
+app.use('/health-check', (req, res) => {
+    res.status(200);
+})
 
 dbConnection.connection().then(result => {
         app.listen(3000, () => {
