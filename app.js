@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 app.use('/task', taskRouter.taskRoutes);
 app.use('/auth', authRouter.authRoutes);
 app.get('/health-check', (req, res) => {
-    res.status(200);
+    res.status(200).json();
 })
 
 dbConnection.connection().then(result => {
