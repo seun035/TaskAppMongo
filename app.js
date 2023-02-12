@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 //app.use('/auth', authRouter.authRoutes);
 app.use('/task', taskRouter.taskRoutes);
 app.use('/auth', authRouter.authRoutes);
-app.use('/health-check', (req, res) => {
+app.get('/health-check', (req, res) => {
     res.status(200);
 })
 
